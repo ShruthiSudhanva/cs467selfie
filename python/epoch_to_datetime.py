@@ -3,6 +3,8 @@
 import time
 import json
 
+#Add username/id to json
+
 if __name__ == '__main__':
     json_data = open("Location.json")
     data = json.load(json_data)["data"]["items"]
