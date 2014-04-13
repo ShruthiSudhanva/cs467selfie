@@ -1,0 +1,1 @@
+python location_history_json_converter.py ../LocationHistory.json Location.json -f json

@@ -1,13 +1,28 @@
 
 //Load json and construct array for a day
-            var date = "2014-04-12";
-            var points = json[0][date];
+function draw(username, date, fromHour, hour)
+{
+            var points =[];
             var myTrip = [];
             var x=new google.maps.LatLng(40.1154708,-88.2212035);
-            for(var i=0; i<points.length; i++)
+            if(json[username].hasOwnProperty(date))
             {
-              var position = new google.maps.LatLng(points[i]['latitude'],points[i]['longitude']);
-              myTrip.push(position);
+              for(var hour=parseInt(fromHour); hour<=parseInt(toHour); hour++){
+                if(json[username][date].hasOwnProperty(hour.toString()))
+                {
+                      points = points.concat(json[username][date][hour.toString()]);
+                }
+              }
+              
+              for(var i=0; i<points.length; i++)
+              {
+                var position = new google.maps.LatLng(points[i]['latitude'],points[i]['longitude']);
+                myTrip.push(position);
+                if(i==0)
+                {
+                  x=position;
+                }
+              }
             }
             
             function initialize()
@@ -22,8 +37,8 @@
 
             var flightPath=new google.maps.Polyline({
               path:myTrip,
-              strokeColor:"#0000FF",
-              strokeOpacity:0.8,
+              strokeColor:"red",
+              strokeOpacity:0.6,
               strokeWeight:3
               });
 
@@ -31,3 +46,4 @@
             }
 
             google.maps.event.addDomListener(window, 'load', initialize);
+}

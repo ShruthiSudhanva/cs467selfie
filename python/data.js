@@ -1,4 +1,4 @@
-var json = {
+{
   "Shruthi Sudhanva": {
     "2014-04-12": {
       "11": [
@@ -5239,6 +5239,6 @@ var json = {
           "longitude": -88.2212018
         }
       ]
+    }
   }
-}
 }
