@@ -13,7 +13,6 @@ function draw(username, date, fromHour, hour)
                       points = points.concat(json[username][date][hour.toString()]);
                 }
               }
-              
               for(var i=0; i<points.length; i++)
               {
                 var position = new google.maps.LatLng(points[i]['latitude'],points[i]['longitude']);
@@ -45,5 +44,5 @@ function draw(username, date, fromHour, hour)
             flightPath.setMap(map);
             }
 
-            google.maps.event.addDomListener(window, 'load', initialize);
+            initialize();
 }
