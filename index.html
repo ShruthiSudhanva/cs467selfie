@@ -16,6 +16,7 @@
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
+                background-image:url("image/quad.jpg");
             }
         </style>
 
@@ -32,16 +33,33 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         <div class="container">
+            <div class="row" id="topcircle"></div>
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-2" id="leftcircle"></div>
+                <div class="col-md-4">
                     <div id="googleMap" style="width:350px;height:300px;"></div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-2" id="rightcircle"></div>
+                <div class="col-md-4">
                     <div class="form-group">
+                    <div class="row">
+                        <div class="btn-group">
+                          <button type="button" class="userSelected btn btn-default">User1</button>
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">User1</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li ><a id="User1" href="#">User1</a></li>
+                            <li><a  id="User2" href="#">User2</a></li>
+                            <li ><a id="User3" href="#">User3</a></li>
+                          </ul>
+                        </div>
+                    </div>
                     <div class="row">
                     <label for="dtp_input1" class="col-md-5 control-label">From</label>
                     </div>
-                    <div class="input-group date form_datetime col-md-7" id="from" data-date="2014-09-16T05:25:07Z"  data-link-field="dtp_input1">
+                    <div class="input-group date form_datetime col-md-9" id="from" data-date="2014-09-16T05:25:07Z"  data-link-field="dtp_input1">
                         <input class="form-control" size="10" type="text" value="" readonly>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
@@ -52,7 +70,7 @@
                     <div class="row">
                         <label for="dtp_input1" class="col-md-5 control-label">To</label>
                     </div>
-                    <div class="input-group date form_datetime col-md-7" id="to" data-date="2014-09-16T05:25:07Z"  data-link-field="dtp_input1">
+                    <div class="input-group date form_datetime col-md-9" id="to" data-date="2014-09-16T05:25:07Z"  data-link-field="dtp_input1">
                         <input class="form-control" size="10" type="text" value="" readonly>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
@@ -60,10 +78,14 @@
                         <input type="hidden" id="dtp_input1" value="" /><br/>
                     </div>
                     <div class="row">
+                        <label class="col-md-8" id="alert">Please enter same date values</label>
+                    </div>
+                    <div class="row">
                         <button type="button" class="btn btn-primary submit" id="submit">Submit</button>
                     </div>
                 </div>
             </div>
+            <div class="row" id="bottomcircle"></div>
         </div>
   
      

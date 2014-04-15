@@ -1,5 +1,5 @@
 var json = {
-  "Shruthi Sudhanva": {
+  "User1": {
     "2014-04-12": {
       "11": [
         {
