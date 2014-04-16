@@ -49,3 +49,8 @@ var onclick=function(){
 $('.submit').click(function() {
 	draw(username, date, fromHour, toHour);
 	});
+
+$('.back').click(function(){
+	drawInitial();
+	drawCircles();
+});

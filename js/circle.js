@@ -1,4 +1,7 @@
-
+var users = 
+{"User1":"Computer Science",
+"User2": "Special Edu",
+"User3": "Accountancy" };
 
 
 var circles = [];
@@ -29,11 +32,25 @@ var bottomCircle = bottomSvgContainer.append("g").selectAll("circle")
                        .attr("r", function (d) { return 60; })
                        .style("fill", function(d) { return d.color; })
                        .on("click", function(d){
+                          if(circles!=allCircles)
+                          {
+                            if(d.college == users[username])
+                            {
+                              alert("yes");
+                            }
+                            else
+                            {
+                              alert("No");
+                            }
+                          }
+                          else
+                          {
                           if(d.college=="Engineering")
                             circles = circlesEng;
                           else
                             circles = circlesEdu;
                           drawCircles();
+                        }
                        });;
 
   bottomCircle.append("text")
@@ -59,8 +76,22 @@ var topCircle = topSvgContainer.append("g").selectAll("circle")
                        .attr("r", function (d) { return 60; })
                        .style("fill", function(d) { return d.color; })
                        .on("click", function(d){
+                          if(circles!=allCircles)
+                          {
+                            if(d.college == users[username])
+                            {
+                              alert("yes");
+                            }
+                            else
+                            {
+                              alert("No");
+                            }
+                          }
+                          else
+                          {
                           circles = circlesMed;
                           drawCircles();
+                          }
                        });
 
   topCircle.append("text")
@@ -85,9 +116,23 @@ var leftCircle = leftSvgContainer.append("g").selectAll("circle")
                        .attr("cy", function (d) { return d.y_axis; })
                        .attr("r", function (d) { return 60; })
                        .style("fill", function(d) { return d.color; })
-                       .on("click", function(){
-                          circles = circlesArts;
-                          drawCircles();
+                       .on("click", function(d){
+                          if(circles!=allCircles)
+                          {
+                            if(d.college == users[username])
+                            {
+                              alert("yes");
+                            }
+                            else
+                            {
+                              alert("No");
+                            }
+                          }
+                          else
+                          {
+                            circles = circlesArts;
+                            drawCircles();
+                          }
                        });
 
   leftCircle.append("text")
@@ -113,10 +158,17 @@ var rightCircle = rightSvgContainer.append("g").selectAll("circle")
                        .attr("cy", function (d) { return d.y_axis; })
                        .attr("r", function (d) { return 60; })
                        .style("fill", function(d) { return d.color; })
-                       .on("click", function(){
+                       .on("click", function(d){
                           if(circles!=allCircles)
                           {
-                            //Match from data.js
+                            if(d.college == users[username])
+                            {
+                              alert("yes");
+                            }
+                            else
+                            {
+                              alert("No");
+                            }
                           }
                           else
                           {
