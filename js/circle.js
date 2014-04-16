@@ -36,11 +36,13 @@ var bottomCircle = bottomSvgContainer.append("g").selectAll("circle")
                           {
                             if(d.college == users[username])
                             {
-                              alert("yes");
+                               var msg = "You are right! " + username + " is a "+ d.college + " major!" 
+                              document.getElementById("msg").innerHTML = msg;
                             }
                             else
                             {
-                              alert("No");
+                              var msg = "Sorry! Wrong try!"
+                              document.getElementById("msg").innerHTML = msg;
                             }
                           }
                           else
@@ -80,11 +82,13 @@ var topCircle = topSvgContainer.append("g").selectAll("circle")
                           {
                             if(d.college == users[username])
                             {
-                              alert("yes");
+                               var msg = "You are right! " + username + " is a "+ d.college + " major!" 
+                              document.getElementById("msg").innerHTML = msg;
                             }
                             else
                             {
-                              alert("No");
+                              var msg = "Sorry! Wrong try!"
+                              document.getElementById("msg").innerHTML = msg;
                             }
                           }
                           else
@@ -121,11 +125,13 @@ var leftCircle = leftSvgContainer.append("g").selectAll("circle")
                           {
                             if(d.college == users[username])
                             {
-                              alert("yes");
+                               var msg = "You are right! " + username + " is a "+ d.college + " major!" 
+                              document.getElementById("msg").innerHTML = msg;
                             }
                             else
                             {
-                              alert("No");
+                              var msg = "Sorry! Wrong try!"
+                              document.getElementById("msg").innerHTML = msg;
                             }
                           }
                           else
@@ -163,11 +169,13 @@ var rightCircle = rightSvgContainer.append("g").selectAll("circle")
                           {
                             if(d.college == users[username])
                             {
-                              alert("yes");
+                              var msg = "You are right! " + username + " is a "+ d.college + " major!" 
+                              document.getElementById("msg").innerHTML = msg;
                             }
                             else
                             {
-                              alert("No");
+                              var msg = "Sorry! Wrong try!"
+                              document.getElementById("msg").innerHTML = msg;
                             }
                           }
                           else

@@ -19,6 +19,14 @@
                 background-image:url("image/quad.jpg");
                 background-size: 100%;
             }
+            h1
+            {
+                color: white;
+            }
+            label
+            {
+                color: white;
+            }
         </style>
 
         <script
@@ -41,7 +49,7 @@
                   <span class="glyphicon glyphicon-arrow-left"></span> Try Again
                 </button>
                 </div>
-            <div class="col-md-6"><h1>You are right!!</h1></div>
+            <div class="col-md-6"><h1 id="msg"></h1></div>
             </div>
             <div class="row" id="topcircle"></div>
             <div class="row">
@@ -56,6 +64,7 @@
                     </div>
                     <div class="form-group">
                     <div class="row">
+                        <label>VIEW LOCATION HISTORY</label><br>
                         <div class="btn-group">
                           <button type="button" class="userSelected btn btn-default">User1</button>
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -70,7 +79,7 @@
                         </div>
                     </div>
                     <div class="row">
-                    <label for="dtp_input1" class="col-md-5 control-label">From</label>
+                    <label for="dtp_input1" class="col-md-7 control-label">From date-time</label>
                     </div>
                     <div class="input-group date form_datetime col-md-9" id="from" data-date="2014-09-16T05:25:07Z"  data-link-field="dtp_input1">
                         <input class="form-control" size="10" type="text" value="" readonly>
@@ -81,7 +90,7 @@
                     </div>
                     <div class="form-group">
                     <div class="row">
-                        <label for="dtp_input1" class="col-md-5 control-label">To</label>
+                        <label for="dtp_input1" class="col-md-5 control-label">To time</label>
                     </div>
                     <div class="input-group date form_datetime col-md-9" id="to" data-date="2014-09-16T05:25:07Z"  data-link-field="dtp_input1">
                         <input class="form-control" size="10" type="text" value="" readonly>
@@ -95,6 +104,9 @@
                     </div>
                     <div class="row">
                         <button type="button" class="btn btn-primary submit" id="submit">Submit</button>
+                    </div>
+                    <div class="row">
+                        <label> TRY TO GUESS THEIR MAJOR!! </label>
                     </div>
                 </div>
             </div>
