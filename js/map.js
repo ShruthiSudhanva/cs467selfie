@@ -26,6 +26,7 @@ function draw(username, date, fromHour, hour)
             
             function initialize()
             {
+            
             var mapProp = {
               center:x,
               zoom:14,
