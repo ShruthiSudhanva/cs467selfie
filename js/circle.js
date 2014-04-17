@@ -93,7 +93,7 @@ var topCircle = topSvgContainer.append("g").selectAll("circle")
                           }
                           else
                           {
-                          circles = circlesMed;
+                          circles = circlesAvi;
                           drawCircles();
                           }
                        });

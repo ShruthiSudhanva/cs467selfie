@@ -17,7 +17,8 @@ $('#from')
 		month = "0" + month.toString();
 	}
 	toDate = ev.date.getFullYear() + "-" + month + "-" + ev.date.getUTCDate();
-	fromHour = ev.date.getHours()+ev.date.getTimezoneOffset()/60;
+	fromHour = (ev.date.getHours()+ev.date.getTimezoneOffset()/60)%24;
+	//alert(fromHour);
 });
 
 $('#to')
@@ -33,7 +34,7 @@ $('#to')
 		$("#alert").show();
 	else
 		$("#alert").hide();
-	toHour = ev.date.getHours()+ev.date.getTimezoneOffset()/60;
+	toHour = (ev.date.getHours()+ev.date.getTimezoneOffset()/60)%24;
 });
 
 var onclick=function(){

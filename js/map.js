@@ -1,16 +1,21 @@
 
 //Load json and construct array for a day
-function draw(username, date, fromHour, hour)
+function draw(username, date, fromHour, toHour)
 {
+            //alert(fromHour);
+            //alert(toHour);
             var points =[];
             var myTrip = [];
             var x=new google.maps.LatLng(40.1154708,-88.2212035);
             if(json[username].hasOwnProperty(date))
             {
-              for(var hour=parseInt(fromHour); hour<=parseInt(toHour); hour++){
-                if(json[username][date].hasOwnProperty(hour.toString()))
+              for(var hour=0; hour<=23; hour++){
+                if(hour>=parseInt(fromHour) && hour<=parseInt(toHour))
                 {
-                      points = points.concat(json[username][date][hour.toString()]);
+                  if(json[username][date].hasOwnProperty(hour.toString()))
+                  {
+                        points = points.concat(json[username][date][hour.toString()]);
+                  }
                 }
               }
               for(var i=0; i<points.length; i++)
