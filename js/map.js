@@ -6,11 +6,16 @@ function draw(username, date, fromHour, toHour)
             //alert(toHour);
             var points =[];
             var myTrip = [];
+            console.log(username);
+            console.log(date);
+            console.log(fromHour.toString());
+            console.log(toHour.toString());
             var x=new google.maps.LatLng(40.1154708,-88.2212035);
+            console.log(json[username][date.toString()]);
             if(json[username].hasOwnProperty(date))
             {
               for(var hour=0; hour<=23; hour++){
-                if(hour>=parseInt(fromHour) && hour<=parseInt(toHour))
+                if(hour>=fromHour && hour<=toHour)
                 {
                   if(json[username][date].hasOwnProperty(hour.toString()))
                   {

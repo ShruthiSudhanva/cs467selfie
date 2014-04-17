@@ -16,7 +16,12 @@ $('#from')
 	{
 		month = "0" + month.toString();
 	}
-	toDate = ev.date.getFullYear() + "-" + month + "-" + ev.date.getUTCDate();
+	var day = parseInt(ev.date.getUTCDate());
+	if(day<10)
+	{
+		day = "0" + day.toString();
+	}
+	toDate = ev.date.getFullYear() + "-" + month + "-" + day;
 	fromHour = (ev.date.getHours()+ev.date.getTimezoneOffset()/60)%24;
 	//alert(fromHour);
 });
@@ -29,7 +34,12 @@ $('#to')
 	{
 		month = "0" + month.toString();
 	}
-	fromDate = ev.date.getFullYear() + "-" + month + "-" + ev.date.getUTCDate();
+	var day = parseInt(ev.date.getUTCDate());
+	if(day<10)
+	{
+		day = "0" + day.toString();
+	}
+	fromDate = ev.date.getFullYear() + "-" + month + "-" + day;
 	if(toDate!=fromDate)
 		$("#alert").show();
 	else
@@ -48,7 +58,7 @@ var onclick=function(){
 	$('#User3').click(onclick);
 
 $('.submit').click(function() {
-	draw(username, date, fromHour, toHour);
+	draw(username, fromDate, fromHour, toHour);
 	});
 
 $('.back').click(function(){
