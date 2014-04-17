@@ -1,7 +1,7 @@
 var users = 
 {"User1":"Computer Science",
-"User2": "Special Edu",
-"User3": "Accountancy" };
+"User2": "Electronics",
+"User3": "Computer Science" };
 
 
 var circles = [];
